@@ -1,0 +1,1 @@
+"""Escreva um programa que recebe como entrada um número inteiro positivo n. Em seguida, seu programa deve ler n números inteiros e adicioná-los numa lista. Por fim, seu programa receberá um número inteiro x e deve verificar se x pertence ou não à lista."""

@@ -12,7 +12,6 @@ while True:
 
     escolha = input("Deseja adicionar um número a mais? (s/n): ").strip().lower()
 
-
     while escolha != "s" and escolha != "n":
         print("Opção inválida. Tente novamente...")
         escolha = input("Deseja adicionar um número a mais? (s/n): ").strip().lower()
@@ -20,11 +19,11 @@ while True:
     if escolha == "n":
         break
 
-print("A lista de números é essa: {}.".format(positivos))
-
 verificar = int(input("Qual número deseja verificar na lista?: "))
 
 if verificar in positivos:
     print("O número {} está na lista!".format(verificar))
 else:
     print("O número {} NÃO está na lista...".format(verificar))
+
+print("A lista de números é essa: {}.".format(positivos))
