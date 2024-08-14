@@ -34,12 +34,25 @@ for i in range(len(pessoas)):
     contador += 1
 print("Foram cadastradas {} pessoas.".format(contador))
 
-#Loop para somar idades e calcular média.
-soma = 0
+# Loop para somar idades e calcular média.
+soma_total = 0
 for individuo in pessoas:
-    soma += individuo['idade']
-media = soma / contador
+    soma_total += individuo['idade']
+media = soma_total / contador
 print("A média de todas as idades é: {} anos.".format(media))
 
+# Loop para contar todas as mulheres.
+contador_mulheres = 0
 for individuo in mulheres:
+    contador_mulheres += 1
+print("Foram cadastradas {} mulheres.".format(contador_mulheres))
 
+# Loop para contar as idades acima da média.
+acima_média = []
+for individuo in pessoas:
+    if individuo['idade'] > media:  # Geralmente ">" é usado para evitar incluir a média
+        acima_média.append(individuo.copy())  # Adiciona a pessoa individualmente
+print("Pessoas com idade acima da média:")
+for pessoa in acima_média:
+    print(f"Nome: {pessoa['nome']}, Idade: {pessoa['idade']}")
+print("<<ENCERRADO>>")
